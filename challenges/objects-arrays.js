@@ -77,9 +77,8 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-const universitiesList = graduates.map(function(university) {
-  return university.university;
-})
+const universitiesList = graduates.map(university => university.university)
+
 universitiesList.sort()
 universities.push(universitiesList);
 console.log(universities)
@@ -91,16 +90,14 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-const contactInformation = graduates.map(function(contacts) {
-  return `Name: ${contacts.first_name} Email: ${contacts.email}`
-})
+const contactInformation = graduates.map(contacts => `Name: ${contacts.first_name} Email: ${contacts.email}`)
 contactInfo.push(contactInformation)
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-graduates.filter(function(school) {
+graduates.filter(school => {
   if (school.university.includes("Uni")) {
     uni.push(school.university)
   }
@@ -130,7 +127,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
-zooAnimals.forEach(function (names) {
+zooAnimals.forEach(names => {
     animalNames.push(`Name: ${names.animal_name} Scientific: ${names.scientific_name}`)
 })
 console.log(animalNames);
@@ -142,9 +139,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
-const lowAnimalNames = zooAnimals.map(function(names) {
-  return `Name: ${names.animal_name.toLowerCase()}`
-})
+const lowAnimalNames = zooAnimals.map(names => `Name: ${names.animal_name.toLowerCase()}`)
 lowerCase.push(lowAnimalNames);
 console.log(lowerCase); 
 
@@ -154,7 +149,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
-zooAnimals.filter(function(pop) {
+zooAnimals.filter(pop => {
   if (pop.population < 5) {
     lowerPopulation.push(pop)
   }
