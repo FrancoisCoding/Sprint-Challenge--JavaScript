@@ -91,6 +91,10 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+const contactInformation = graduates.map(function(contacts) {
+  return `Name: ${contacts.first_name} Email: ${contacts.email}`
+})
+contactInfo.push(contactInformation)
 console.log(contactInfo);
 
 
